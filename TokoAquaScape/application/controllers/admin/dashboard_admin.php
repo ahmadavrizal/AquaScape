@@ -5,7 +5,7 @@ class Dashboard_admin extends CI_Controller{
     {
         $this->load->view('templates_admin/header');
         $this->load->view('templates_admin/sidebar');
-        $this->load->view('admin/dasboard');
+        $this->load->view('admin/dashoard');
         $this->load->view('templates_admin/footer');
     }
 }
