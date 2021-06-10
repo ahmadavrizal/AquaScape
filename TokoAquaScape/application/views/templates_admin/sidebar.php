@@ -24,14 +24,6 @@
                     <span>Dashboard</span></a>
             </li>
 
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-tv"></i>
-                    <span>Elektronik</span></a>
-            </li>
-
             <li class="nav-item">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-tools"></i>
