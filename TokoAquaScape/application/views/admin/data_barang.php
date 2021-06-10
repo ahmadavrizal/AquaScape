@@ -24,8 +24,8 @@
             <td><?php echo $brg->harga ?></td>
             <td><?php echo $brg->stok ?></td>
             <td><div class="btn btn-succes btn-sm"><i class="fas fa-search-plus"></i></div></td>
-            <td><div class="btn btn-succes btn-sm"><i class="fas fa-edit"></i></div></td>
-            <td><div class="btn btn-succes btn-sm"><i class="fas fa-trash"></i></div></td>
+            <td><?php echo anchor('admin/data_barang/edit/' .$brg->id_barang, '<div class="btn btn-succes btn-sm"><i class="fas fa-edit"></i></div>')?></td>
+            <td><?php echo anchor('admin/data_barang/hapus/' .$brg->id_barang, '<div class="btn btn-succes btn-sm"><i class="fas fa-trash"></i></div>')?></td>
         </tr>
 
         <?php endforeach ?>
