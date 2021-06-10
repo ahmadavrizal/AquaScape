@@ -26,13 +26,13 @@
 
             <li class="nav-item">
                 <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-tools"></i>
+                    <i class="fas fa-fw fa-database"></i>
                     <span>Data Barang</span></a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-fish"></i>
+                    <i class="fas fa-fw fa-file-invoice"></i>
                     <span>Invoice</span></a>
             </li>
 
