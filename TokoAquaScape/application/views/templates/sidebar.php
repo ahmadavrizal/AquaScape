@@ -131,6 +131,16 @@
                             </div>
                         </li>
 
+                        <div class="navbar">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <?php
+                                    $keranjang = 'Keranjang Belanja : '.$this->cart->total_items(). ' items' ?>
+                                <?php echo $keranjang ?>    
+                            </li>
+                            </ul>
+                        </div>
+
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
