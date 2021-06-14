@@ -33,7 +33,7 @@
                 <div class="card-body">
                     <h5 class="card-title mb-1"><?php echo $brg->nama_barang ?></h5>
                     <small><?php echo $brg->keterangan ?></small><br>
-                    <span class="badge rounded-pill bg-light text-dark mb-3">RP. <?php echo $brg->harga ?></span><br>
+                    <span class="badge rounded-pill bg-light text-dark mb-3">RP. <?php echo number_format($brg->harga, 0,',','.') ?></span><br>
                     <?php echo anchor('dashboard/tambah_ke_keranjang/' .$brg->id_barang, '<div class="btn btn-sm btn-primary">Tambah Ke keranjang</div>') ?>
                     <a href="#" class="btn btn-sm btn-success">Detail</a>
                 </div>
