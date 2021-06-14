@@ -38,7 +38,7 @@ class Data_barang extends CI_Controller{
             'gambar'        => $gambar
         );
 
-        $this->model_barang->tambah_barang($data, 'barang');
+        $this->model_barang->tambah_barang($data, 'tbbarang');
         redirect('admin/data_barang/index');
     }
 
@@ -62,10 +62,10 @@ class Data_barang extends CI_Controller{
 
         $data = array(
             'nama_barang'       => $nama_barang,
-            'keterangan'       => $keterangan,
-            'kategori'       => $kategori,
-            'harga'       => $harga,
-            'stok'       => $stok,
+            'keterangan'        => $keterangan,
+            'kategori'          => $kategori,
+            'harga'             => $harga,
+            'stok'              => $stok,
         );
 
         $where = array(
