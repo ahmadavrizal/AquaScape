@@ -2,7 +2,7 @@
 
 class Model_barang extends CI_Model{
     public function tampil_data(){
-        return $this->db->get('barang');
+        return $this->db->get('tbbarang');
     }
 
     public function tambah_barang($data, $table){
@@ -28,7 +28,7 @@ class Model_barang extends CI_Model{
     {
         $result = $this->db->where('id_barang', $id)
                            ->limit(1)
-                           ->get('barang');
+                           ->get('tbbarang');
         if($result->num_rows() > 0){
             return $result->row();
         }else{
