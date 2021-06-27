@@ -35,7 +35,7 @@
                     <small><?php echo $brg->keterangan ?></small><br>
                     <span class="badge rounded-pill bg-light text-dark mb-3">RP. <?php echo number_format($brg->harga, 0,',','.') ?></span><br>
                     <?php echo anchor('dashboard/tambah_ke_keranjang/' .$brg->id_barang, '<div class="btn btn-sm btn-primary">Tambah Ke keranjang</div>') ?>
-                    <a href="#" class="btn btn-sm btn-success">Detail</a>
+                    <?php echo anchor('dashboard/detail/' .$brg->id_barang, '<div class="btn btn-sm btn-success">Detail</div>') ?>
                 </div>
             </div>
 
