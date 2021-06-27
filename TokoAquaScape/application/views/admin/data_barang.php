@@ -55,7 +55,13 @@
             </div>
             <div class="form-group">
                 <label>Kategori</label>
-                <input type="text" name="kategori" class="form-control">
+                <select class="form-control" name="kategori">
+                <option>Elektronik</option>
+                <option>Alat Pancing</option>
+                <option>Makanan Ikan</option>
+                <option>Macam Aquarium</option>
+                <option>Spesies Ikan</option>
+                </select>
             </div>
             <div class="form-group">
                 <label>Harga</label>
