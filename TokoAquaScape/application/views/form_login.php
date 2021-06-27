@@ -1,4 +1,4 @@
-<body class="bg-gradient">
+<body class="bg-gradient-secondary">
 
     <div class="container">
 
@@ -30,12 +30,12 @@
                                                 <?php echo form_error('password', '<div class="text-danger small ml-2">','</div>'); ?>
                                         </div>
                                         
-                                            <button type="submit" class="btn btn-primary from-control">Login</button>
+                                            <center><button type="submit" class="btn btn-primary from-control">Login</button></center>
                                     
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="register.html">REGISTRASI</a>
+                                        <a class="small" href="<?php echo base_url('registrasi/index'); ?>">Daftar?</a>
                                     </div>
                                 </div>
                             </div>
