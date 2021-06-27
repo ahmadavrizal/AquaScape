@@ -56,4 +56,13 @@ class Dashboard extends CI_Controller{
         $this->load->view('proses_pesanan');
         $this->load->view('templates/footer');
     }
+    
+    public function detail($id_barang)
+    {
+        $data['barang'] = $this->model_barang->detail_brg($id_barang);
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('detail_barang',$data);
+        $this->load->view('templates/footer');
+    }
 }
