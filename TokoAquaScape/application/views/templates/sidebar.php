@@ -19,7 +19,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo base_url('dashboard') ?>">
+                <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -34,31 +34,31 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('kategori/elektronik') ?>">
+                <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-tv"></i>
                     <span>Elektronik</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('kategori/alat_pancing') ?>">
+                <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-tools"></i>
                     <span>Alat Pancing</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('kategori/makanan_ikan') ?>">
+                <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-fish"></i>
                     <span>Makanan Ikan</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('kategori/macam_aquarium') ?>">
+                <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-tools"></i>
                     <span>Macam Aquarium</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('kategori/spesies_ikan') ?>">
+                <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-fish"></i>
                     <span>Spesies Ikan</span></a>
             </li>
@@ -72,11 +72,6 @@
             </div>
 
             <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-            </div>
 
         </ul>
         <!-- End of Sidebar -->
@@ -141,43 +136,22 @@
                                 <li>
                                     <?php
                                     $keranjang = 'Keranjang Belanja : '.$this->cart->total_items(). ' items' ?>
-                                <?php echo anchor('dashboard/detail_keranjang', $keranjang) ?>   
+                                <?php echo anchor('dashboard/detail_keranjang', $keranjang) ?>    
                             </li>
                             </ul>
-                        </div>
+                            <div class="topbar-divider d-none d-sm-block"></div>
 
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
-
+                                <ul class="nav navbar-nav navbar-right">
+                                    <?php if($this->session->userdata('username')) { ?>
+                                        
+                                        <li class="ml-2"><?php echo anchor('auth/logout','Logout'); ?></li>
+                                    <?php } else { ?>
+                                        <li><?php echo anchor('auth/login', 'Login'); ?></li>
+                                    <?php } ?>
                     </ul>
+                    </div>
+
+                        
 
                 </nav>
                 <!-- End of Topbar -->
