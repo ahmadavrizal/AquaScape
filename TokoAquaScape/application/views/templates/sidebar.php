@@ -19,7 +19,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="<?php echo base_url('dashboard') ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -34,31 +34,31 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="<?php echo base_url('kategori/elektronik') ?>">
                     <i class="fas fa-fw fa-tv"></i>
                     <span>Elektronik</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="<?php echo base_url('kategori/alat_pancing') ?>">
                     <i class="fas fa-fw fa-tools"></i>
                     <span>Alat Pancing</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="<?php echo base_url('kategori/makanan_ikan') ?>">
                     <i class="fas fa-fw fa-fish"></i>
                     <span>Makanan Ikan</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="<?php echo base_url('kategori/macam_aquarium') ?>">
                     <i class="fas fa-fw fa-tools"></i>
                     <span>Macam Aquarium</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="<?php echo base_url('kategori/spesies_ikan') ?>">
                     <i class="fas fa-fw fa-fish"></i>
                     <span>Spesies Ikan</span></a>
             </li>
@@ -72,6 +72,11 @@
             </div>
 
             <!-- Sidebar Message -->
+            <div class="sidebar-card d-none d-lg-flex">
+                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
+                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
+                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
+            </div>
 
         </ul>
         <!-- End of Sidebar -->
@@ -136,7 +141,7 @@
                                 <li>
                                     <?php
                                     $keranjang = 'Keranjang Belanja : '.$this->cart->total_items(). ' items' ?>
-                                <?php echo anchor('dashboard/detail_keranjang', $keranjang) ?>    
+                                <?php echo anchor('dashboard/detail_keranjang', $keranjang) ?>   
                             </li>
                             </ul>
                         </div>
