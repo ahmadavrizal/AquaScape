@@ -1,25 +1,30 @@
 <?php
 
-class Model_barang extends CI_Model{
-    public function tampil_data(){
+class Model_barang extends CI_Model
+{
+    public function tampil_data()
+    {
         return $this->db->get('tbbarang');
     }
 
-    public function tambah_barang($data, $table){
-        $this->db->insert($table,$data);
+    public function tambah_barang($data, $table)
+    {
+        $this->db->insert($table, $data);
     }
 
-    public function edit_barang($where, $table){
+    public function edit_barang($where, $table)
+    {
         return $this->db->get_where($table, $where);
     }
 
     public function update_data($where, $data, $table)
     {
         $this->db->where($where);
-        $this->db->update($where,$data);
+        $this->db->update($where, $data);
     }
 
-    public function hapus_data($where,$table){
+    public function hapus_data($where, $table)
+    {
         $this->db->where($where);
         $this->db->delete($table);
     }
@@ -27,21 +32,21 @@ class Model_barang extends CI_Model{
     public function find($id)
     {
         $result = $this->db->where('id_barang', $id)
-                           ->limit(1)
-                           ->get('tbbarang');
-        if($result->num_rows() > 0){
+            ->limit(1)
+            ->get('tbbarang');
+        if ($result->num_rows() > 0) {
             return $result->row();
-        }else{
+        } else {
             return array();
         }
     }
-    
+
     public function detail_brg($id_barang)
     {
-        $result = $this->db->where('id_barang',$id_barang)->get('tb_barang');
-        if($result-num_rows() > 0){
+        $result = $this->db->where('id_barang', $id_barang)->get('tbbarang');
+        if ($result->num_rows() > 0) {
             return $result->result();
-        }else {
+        } else {
             return false;
         }
     }
